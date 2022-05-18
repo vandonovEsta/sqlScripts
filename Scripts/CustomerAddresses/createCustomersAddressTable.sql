@@ -7,5 +7,10 @@ CREATE TABLE public.customers_addresses (
     state VARCHAR(255),
     postal_code INT NOT NULL,
     CHECK(postal_code>0),
-    country VARCHAR(255) NOT NULL
+    country VARCHAR(255) NOT null
 );
+
+--drop datble 
+drop table customers_addresses;
+
+
