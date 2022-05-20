@@ -5,7 +5,7 @@ select count(product_id) as products from products_inventory;
 select avg(prive_with_vat) as avg_price_with_vat from products_inventory;
 
 --the total amount of all available items in stock (use price with VAT and available qty.)
-select sum(available_quantity) as total_quantity from products_inventory 
+select sum(available_quantity * price_with_vat) as total_quantity from products_inventory 
 where is_product_in_stock = true;
 
 --Find the most and least expensive item from the table
